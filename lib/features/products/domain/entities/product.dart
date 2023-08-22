@@ -1,5 +1,7 @@
 import 'package:teslo_shop/features/auth/domain/entities/user.dart';
 
+// enum Gender { men, women, kid }
+
 class Product {
   final String id;
   final String title;
@@ -24,7 +26,7 @@ class Product {
     required this.gender,
     required this.tags,
     required this.images,
-    required this.user,
+    this.user,
   });
 
   Product copyWith({
@@ -67,4 +69,19 @@ class Product {
         'user': user?.toJson(),
         'images': images,
       };
+
+  @override
+  String toString() => 'Product{\n'
+      'id: $id,\n'
+      'title: $title,\n'
+      'price: $price,\n'
+      'description: $description,\n'
+      'slug: $slug,\n'
+      'stock: $stock,\n'
+      'sizes: $sizes,\n'
+      'gender: $gender,\n'
+      'tags: $tags,\n'
+      'user: $user,\n'
+      'images: $images\n'
+      '}';
 }

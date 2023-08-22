@@ -5,7 +5,7 @@ const colorSeed = Color(0xff424CB8);
 const scaffoldBackgroundColor = Color(0xFFF8F7F7);
 
 class AppTheme {
-  ThemeData getTheme() => ThemeData(
+  static ThemeData get theme => ThemeData(
         ///* General
         useMaterial3: true,
         colorSchemeSeed: colorSeed,
@@ -30,8 +30,9 @@ class AppTheme {
         filledButtonTheme: FilledButtonThemeData(
           style: ButtonStyle(
             textStyle: MaterialStatePropertyAll(
-              GoogleFonts.montserratAlternates()
-                  .copyWith(fontWeight: FontWeight.w700),
+              GoogleFonts.montserratAlternates().copyWith(
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ),
